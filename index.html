@@ -25,15 +25,13 @@
 <body>
   <div id="hero-banner">Welcome to our website!</div>
   <button id="cta-button">Click Me</button>
-  <!-- Simulate geo-location (profile.city) manually
+ <!-- Simulate geo-location (profile.city) manually -->
   <script>
-    // Simulate city for testing XT activity
-    adobe.target.trackEvent({
-      mbox: "update-profile",
-      params: {
-        "profile.city": "Mumbai"  // Change to "Delhi" or anything else to test other experiences
+    adobe.target.getOffer({
+      mbox: "target-global-mbox",
+      success: function(offer) {
+        adobe.target.applyOffer({ mbox: "target-global-mbox", offer: offer });
       }
-    }); -->
+    });
   </script>
-</body>
-</html>
+  <body>
