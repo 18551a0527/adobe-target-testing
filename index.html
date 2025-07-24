@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adobe Target XT Test – Geo-based Hero Banner</title>
+
+  <!-- Adobe Target at.js -->
+   
+  <script src="https://assets.adobedtm.com/e72b4113c11a/10eecbc624b9/launch-8c22c84848f1-development.min.js" async></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    #hero-banner {
+      background-color: gray;
+      color: white;
+      padding: 60px;
+      font-size: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="hero-banner">Welcome to our website!</div>
+  <button id="cta-button">Click Me</button>
+  <!-- Simulate geo-location (profile.city) manually -->
+  <script>
+    // Simulate city for testing XT activity
+    adobe.target.trackEvent({
+      mbox: "update-profile",
+      params: {
+        "profile.city": "Mumbai"  // Change to "Delhi" or anything else to test other experiences
+      }
+    });
+  </script>
+</body>
+</html>
