@@ -1,49 +1,67 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Adobe Target Practice</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Target Commerce</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    .hero {
-      padding: 50px;
-      background: #f5f5f5;
-    }
-
-    .btn {
-      background: blue;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <div class="hero">
+  <header>
+    <div class="logo">Target Commerce</div>
 
-    <h1 id="title">
-      Welcome to My Store
-    </h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
 
-    <p id="subtitle">
-      Adobe Target Practice Website
+  <section class="hero">
+    <h1 id="hero-title">Summer Sale 50% OFF</h1>
+
+    <p id="hero-subtitle">
+      Practice Adobe Target personalization and A/B testing.
     </p>
 
-    <button class="btn">
-      Buy Now
+    <button class="primary-btn">
+      Shop Now
     </button>
+  </section>
 
-  </div>
+  <section class="features">
 
-</body>
+    <div class="card">
+      <h2>Free Shipping</h2>
+      <p>Orders above ₹999</p>
+    </div>
+
+    <div class="card">
+      <h2>Fast Delivery</h2>
+      <p>Get products in 2 days</p>
+    </div>
+
+    <div class="card">
+      <h2>Exclusive Deals</h2>
+      <p>Special discounts for members</p>
+    </div>
+
+  </section>
+
+  <section class="products-preview">
+
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="https://picsum.photos/300/200?1" alt="Product" />
+        <h3>Running Shoes</h3>
+        <p>₹2,999</p>
+        <button>Add to Cart</button>
+      </div>
+
 </html>
